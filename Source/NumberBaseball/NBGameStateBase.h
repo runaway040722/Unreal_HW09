@@ -23,8 +23,12 @@ public:
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
     void SetTimeRemaining(int32 NewTime) { TimeRemaining = NewTime; }
+
+    UFUNCTION(BlueprintCallable, Category = "NumberBaseball")
     int32 GetTimeRemaining() const { return TimeRemaining; }
 
     void SetCurrentTurnPlayer(APlayerController* NewPlayer) { CurrentTurnPlayer = NewPlayer; }
+
+    UFUNCTION(BlueprintCallable, Category = "NumberBaseball")
     APlayerController* GetCurrentTurnPlayer() const { return CurrentTurnPlayer; }
 };
